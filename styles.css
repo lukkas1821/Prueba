@@ -1,0 +1,144 @@
+/* Paleta de colores */
+:root {
+    --primary-color: #007bff; /* Azul vibrante */
+    --secondary-color: #f7f7f7; /* Gris claro */
+    --text-color: #333; /* Gris oscuro para el texto */
+    --card-bg: #fff; /* Blanco para el fondo de las tarjetas */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --- Cabecera --- */
+.header {
+    background-color: var(--card-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+.header .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.header .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.header .menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.header .menu a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Sección Principal (Hero) --- */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1500x500.png?text=Fondo+Hero') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero .btn-cta {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn-cta:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Efecto al pasar el mouse */
+}
+
+/* --- Secciones de Contenido --- */
+.featured-categories, .latest-activities {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after { /* Efecto de línea decorativa debajo del título */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+}
+
+.categories-grid, .activities-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila */
+    justify-content: center;
+    gap: 2rem;
+}
+
+.category-card, .activity-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 10px var(--shadow-light); /* Sombra para dar profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para las animaciones */
+}
+
+.category-card:hover, .activity-card:hover {
+    transform: translateY(-8px); /* Efecto de "levantar" la tarjeta */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.activity-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* --- Pie de Página --- */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
