@@ -141,4 +141,9 @@ h2::after { /* Efecto de línea decorativa debajo del título */
     color: white;
     text-align: center;
     padding: 1.5rem;
+
+}
+.category-link {
+    text-decoration: none !important;
+    color: inherit; /* Esto hace que el enlace herede el color del texto de la tarjeta */
 }
