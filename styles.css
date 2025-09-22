@@ -1,9 +1,9 @@
 /* Paleta de colores */
 :root {
-    --primary-color: #007bff; /* Azul vibrante */
-    --secondary-color: #f7f7f7; /* Gris claro */
-    --text-color: #333; /* Gris oscuro para el texto */
-    --card-bg: #fff; /* Blanco para el fondo de las tarjetas */
+    --primary-color: #007bff;
+    --secondary-color: #f7f7f7;
+    --text-color: #333;
+    --card-bg: #fff;
     --shadow-light: rgba(0, 0, 0, 0.1);
 }
 
@@ -77,7 +77,7 @@ body {
 
 .hero .btn-cta:hover {
     background-color: #0056b3;
-    transform: scale(1.05); /* Efecto al pasar el mouse */
+    transform: scale(1.05);
 }
 
 /* --- Secciones de Contenido --- */
@@ -93,7 +93,7 @@ h2 {
     display: inline-block;
 }
 
-h2::after { /* Efecto de línea decorativa debajo del título */
+h2::after {
     content: '';
     display: block;
     width: 60px;
@@ -104,7 +104,7 @@ h2::after { /* Efecto de línea decorativa debajo del título */
 
 .categories-grid, .activities-grid {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
 }
@@ -114,12 +114,12 @@ h2::after { /* Efecto de línea decorativa debajo del título */
     border-radius: 10px;
     padding: 2rem;
     width: 300px;
-    box-shadow: 0 4px 10px var(--shadow-light); /* Sombra para dar profundidad */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para las animaciones */
+    box-shadow: 0 4px 10px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .category-card:hover, .activity-card:hover {
-    transform: translateY(-8px); /* Efecto de "levantar" la tarjeta */
+    transform: translateY(-8px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -135,20 +135,16 @@ h2::after { /* Efecto de línea decorativa debajo del título */
     margin-bottom: 1rem;
 }
 
+/* SOLUCIÓN AL PROBLEMA DE ENLACES */
+.category-card a, .activities-grid a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* --- Pie de Página --- */
 .footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1.5rem;
-
-}
-.category-link {
-    text-decoration: none !important;
-    color: inherit; /* Esto hace que el enlace herede el color del texto de la tarjeta */
-}
-
-.category-card a {
-    text-decoration: none;
-    color: inherit;
 }
