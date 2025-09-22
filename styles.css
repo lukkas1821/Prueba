@@ -147,3 +147,8 @@ h2::after { /* Efecto de línea decorativa debajo del título */
     text-decoration: none !important;
     color: inherit; /* Esto hace que el enlace herede el color del texto de la tarjeta */
 }
+
+.category-card a {
+    text-decoration: none;
+    color: inherit;
+}
