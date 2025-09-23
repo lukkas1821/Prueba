@@ -1,28 +1,28 @@
 // Simula una base de datos de actividades
-// Aquí debes listar todas tus actividades con sus detalles.
 const allActivities = [
-    { title: "Juegos Con Balón", description: "Actividades divertidas con pelota.", url: "juegos-con-balon.html" },
-    { title: "Circuitos de Fuerza", description: "Ejercicios para fortalecer el cuerpo.", url: "circuitos-de-fuerza.html" },
-    { title: "La Búsqueda del Tesoro", description: "Aventura y coordinación.", url: "la-busqueda-del-tesoro.html" },
-    { title: "Carrera de Relevos", description: "Velocidad y trabajo en equipo.", url: "carrera-de-relevos.html" },
-    { title: "Yoga Divertido", description: "Equilibrio y relajación para niños.", url: "yoga-divertido.html" },
-    // Agrega más actividades aquí
+    { title: "Juegos Con Balón", description: "Actividades divertidas con pelota.", url: "juegos-con-balon.html", image: "https://via.placeholder.com/400x300.png?text=Juegos+con+Balon" },
+    { title: "Circuitos de Fuerza", description: "Ejercicios para fortalecer el cuerpo.", url: "circuitos-de-fuerza.html", image: "https://via.placeholder.com/400x300.png?text=Circuitos+de+Fuerza" },
+    { title: "La Búsqueda del Tesoro", description: "Aventura y coordinación.", url: "la-busqueda-del-tesoro.html", image: "https://via.placeholder.com/400x300.png?text=Busqueda+del+Tesoro" },
+    { title: "Carrera de Relevos", description: "Velocidad y trabajo en equipo.", url: "carrera-de-relevos.html", image: "https://via.placeholder.com/400x300.png?text=Carrera+de+Relevos" },
+    { title: "Yoga Divertido", description: "Equilibrio y relajación para niños.", url: "yoga-divertido.html", image: "https://via.placeholder.com/400x300.png?text=Yoga+Divertido" },
+    // Agrega aquí más actividades
 ];
+
+// Función para obtener parámetros de la URL
+function getQueryParams() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('query') || '';
+}
 
 // Función principal para mostrar los resultados de la búsqueda
 function displayResults() {
-    // Obtiene la consulta de la URL (lo que el usuario escribió)
-    const params = new URLSearchParams(window.location.search);
-    const query = params.get('query').toLowerCase();
-
-    // Referencias a los elementos HTML
+    const query = getQueryParams().toLowerCase();
     const resultsContainer = document.getElementById('results-container');
     const resultsTitle = document.getElementById('results-title');
 
     resultsTitle.textContent = `Resultados para: "${query}"`;
     resultsContainer.innerHTML = ''; // Limpia resultados anteriores
 
-    // Filtra las actividades basándose en la consulta
     const filteredResults = allActivities.filter(activity =>
         activity.title.toLowerCase().includes(query) ||
         activity.description.toLowerCase().includes(query)
@@ -37,13 +37,15 @@ function displayResults() {
     filteredResults.forEach(result => {
         const cardHtml = `
             <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">${result.title}</h5>
-                        <p class="card-text">${result.description}</p>
-                        <a href="${result.url}" class="btn btn-primary mt-3">Ver actividad</a>
+                <a href="${result.url}" class="card-link">
+                    <div class="result-card shadow-sm">
+                        <img src="${result.image}" class="card-img-top" alt="${result.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${result.title}</h5>
+                            <p class="card-text">${result.description}</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         `;
         resultsContainer.innerHTML += cardHtml;
