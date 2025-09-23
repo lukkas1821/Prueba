@@ -1,22 +1,28 @@
 /* Paleta de colores */
+/* Paleta de colores */
 :root {
-    --primary-color: #007bff;        /* Azul principal para botones */
-    --secondary-color: #6c757d;      /* Gris para texto secundario */
-    --accent-color: #17a2b8;         /* Color de acento para destacar */
-    --background-light: #f8f9fa;     /* Fondo principal claro */
-    --background-dark: #343a40;      /* Fondo de secciones oscuras */
-    --text-color-dark: #212529;      /* Color de texto principal */
-    --text-color-light: #ffffff;     /* Color de texto para fondos oscuros */
-    --card-bg: #fff;                 /* Fondo de las tarjetas */
+    --primary-color: #007bff;
+    --secondary-color: #f7f7f7;
+    --text-color: #333;
+    --card-bg: #fff;
     --shadow-light: rgba(0, 0, 0, 0.1);
+    --primary-color: #007bff;        /* Azul brillante para botones y acentos */
+    --secondary-color: #6c757d;      /* Gris oscuro para texto secundario */
+    --accent-color: #17a2b8;         /* Color para destacar (ej. enlaces) */
+    --background-light: #f8f9fa;     /* Fondo principal muy claro */
+    --background-dark: #343a40;      /* Fondo de secciones oscuras o pie de página */
+    --text-color-dark: #212529;      /* Color principal de texto (casi negro) */
+    --text-color-light: #ffffff;     /* Color de texto para fondos oscuros */
 }
 
 body {
+    background-color: var(--background-light);
+    color: var(--text-color-dark);
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--background-light);
-    color: var(--text-color-dark);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
@@ -28,41 +34,30 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px var(--shadow-light);
+    background-color: var(--background-light);
+}
+.footer {
+    background-color: var(--background-dark);
+    color: var(--text-color-light);
 }
 
 .header .logo {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary-color);
-}
-
-.header .menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 2rem;
-}
-
-.header .menu a {
-    text-decoration: none;
-    color: var(--text-color-dark);
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
+@@ -50,240 +48,245 @@
 .header .menu a:hover {
     color: var(--primary-color);
+}
+.btn {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
 }
 
 /* --- Sección Principal (Hero) --- */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/hero.jpg') no-repeat center center/cover;
-    color: var(--text-color-light);
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://plus.unsplash.com/premium_photo-1686920244658-f3db03fe22e3?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmklQzMlQjFvcyUyMGp1Z2FuZG98ZW58MHx8MHx8fDA%3D') no-repeat center center/cover;
+    color: white;
     text-align: center;
     padding: 6rem 1rem;
 }
-
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
@@ -71,7 +66,7 @@ body {
 .hero .btn-cta {
     display: inline-block;
     background-color: var(--primary-color);
-    color: var(--text-color-light);
+    color: white;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 50px;
@@ -95,7 +90,6 @@ h2 {
     margin-bottom: 2rem;
     position: relative;
     display: inline-block;
-    color: var(--primary-color);
 }
 
 h2::after {
@@ -114,7 +108,7 @@ h2::after {
     gap: 2rem;
 }
 
-.category-card, .activity-card, .result-card {
+.category-card, .activity-card {
     background-color: var(--card-bg);
     border-radius: 10px;
     padding: 2rem;
@@ -123,7 +117,7 @@ h2::after {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.category-card:hover, .activity-card:hover, .result-card:hover {
+.category-card:hover, .activity-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
@@ -141,21 +135,152 @@ h2::after {
 }
 
 /* SOLUCIÓN AL PROBLEMA DE ENLACES */
-.category-card a, .activities-grid a, .card-link {
+.category-card a, .activities-grid a {
     text-decoration: none;
     color: inherit;
 }
 
 /* --- Pie de Página --- */
 .footer {
-    background-color: var(--background-dark);
-    color: var(--text-color-light);
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 1.5rem;
-}}
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.activities-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.activity-card-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.activity-card-container a:hover .activity-card {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
 
 
+/* Contenedor del buscador */
+.search-container {
+    padding: 2rem 1rem;
+    background-color: #f0f0f5; /* Un gris muy claro */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra sutil */
+    text-align: center;
+}
 
+/* Título de la sección */
+.search-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
 
+/* Estilos para el formulario */
+.search-container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre los elementos */
+}
 
+/* Estilo del campo de texto */
+.search-container input[type="text"] {
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s ease;
+}
 
+/* Efecto al hacer foco en el campo de texto */
+.search-container input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff; /* Color primario */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+/* Estilo del botón */
+.search-container .btn {
+    padding: 12px 30px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.search-container .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Estilo para las tarjetas de resultados */
+.result-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden; /* Esto es para que las esquinas de la imagen se vean bien */
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.result-card .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Estilo para el enlace de la tarjeta (para quitar el subrayado) */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Resto de los estilos de la tarjeta */
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-text {
+    color: #666;
+}
