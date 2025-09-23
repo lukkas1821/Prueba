@@ -15,7 +15,10 @@
     background-color: var(--background-dark);
     color: var(--text-color-light);
 }
-
+.btn {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
 /* --- Cabecera --- */
 .header {
     background-color: var(--card-bg);
@@ -279,4 +282,5 @@ h2::after {
 .card-text {
     color: #666;
 }
+
 
