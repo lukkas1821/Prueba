@@ -3,7 +3,7 @@
     --primary-color: #007bff;        /* Azul brillante para botones y acentos */
     --secondary-color: #6c757d;      /* Gris oscuro para texto secundario */
     --accent-color: #17a2b8;         /* Color para destacar (ej. enlaces) */
-    --background-light: #f8f9fa;     /* Fondo principal muy claro */
+    --background-light: #5002D5;     /* Fondo principal muy claro */
     --background-dark: #343a40;      /* Fondo de secciones oscuras o pie de página */
     --text-color-dark: #212529;      /* Color principal de texto (casi negro) */
     --text-color-light: #ffffff;     /* Color de texto para fondos oscuros */
@@ -282,5 +282,6 @@ h2::after {
 .card-text {
     color: #666;
 }
+
 
 
