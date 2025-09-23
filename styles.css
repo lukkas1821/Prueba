@@ -1,29 +1,27 @@
 /* Paleta de colores */
+/* Paleta de colores */
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #f7f7f7;
-    --text-color: #333;
-    --card-bg: #fff;
-    --shadow-light: rgba(0, 0, 0, 0.1);
+    --primary-color: #007bff;        /* Azul brillante para botones y acentos */
+    --secondary-color: #6c757d;      /* Gris oscuro para texto secundario */
+    --accent-color: #17a2b8;         /* Color para destacar (ej. enlaces) */
+    --background-light: #f8f9fa;     /* Fondo principal muy claro */
+    --background-dark: #343a40;      /* Fondo de secciones oscuras o pie de página */
+    --text-color-dark: #212529;      /* Color principal de texto (casi negro) */
+    --text-color-light: #ffffff;     /* Color de texto para fondos oscuros */
 }
-
 body {
+    background-color: var(--background-light);
+    color: var(--text-color-dark);
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    line-height: 1.6;
 }
 
 /* --- Cabecera --- */
 .header {
-    background-color: var(--card-bg);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px var(--shadow-light);
+    background-color: var(--background-light);
+}
+.footer {
+    background-color: var(--background-dark);
+    color: var(--text-color-light);
 }
 
 .header .logo {
@@ -49,6 +47,10 @@ body {
 
 .header .menu a:hover {
     color: var(--primary-color);
+}
+.btn {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
 }
 
 /* --- Sección Principal (Hero) --- */
@@ -284,6 +286,7 @@ h2::after {
 .card-text {
     color: #666;
 }
+
 
 
 
