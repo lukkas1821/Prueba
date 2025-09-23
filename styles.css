@@ -9,20 +9,21 @@
     --text-color-dark: #212529;      /* Color principal de texto (casi negro) */
     --text-color-light: #ffffff;     /* Color de texto para fondos oscuros */
 }
+
 body {
     background-color: var(--background-light);
     color: var(--text-color-dark);
-    font-family: 'Poppins', sans-serif;
+}
+
+.footer {
+    background-color: var(--background-dark);
+    color: var(--text-color-light);
 }
 
 /* --- Cabecera --- */
 .header {
     background-color: var(--background-light);
-}
-.footer {
-    background-color: var(--background-dark);
-    color: var(--text-color-light);
-}
+
 
 .header .logo {
     font-weight: 700;
@@ -286,6 +287,7 @@ h2::after {
 .card-text {
     color: #666;
 }
+
 
 
 
