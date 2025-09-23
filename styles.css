@@ -184,24 +184,63 @@ h2::after {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.search-filter-container {
+
+/* Contenedor del buscador */
+.search-container {
+    padding: 2rem 1rem;
+    background-color: #f0f0f5; /* Un gris muy claro */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra sutil */
+    text-align: center;
+}
+
+/* Título de la sección */
+.search-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para el formulario */
+.search-container form {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-    padding: 10px;
+    align-items: center;
+    gap: 10px; /* Espacio entre los elementos */
 }
 
-#searchInput, #categoryFilter {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+/* Estilo del campo de texto */
+.search-container input[type="text"] {
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
     font-size: 1rem;
-    width: 250px;
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s ease;
 }
 
-#searchInput:focus, #categoryFilter:focus {
+/* Efecto al hacer foco en el campo de texto */
+.search-container input[type="text"]:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #007bff; /* Color primario */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+/* Estilo del botón */
+.search-container .btn {
+    padding: 12px 30px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.search-container .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
