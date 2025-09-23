@@ -5,19 +5,18 @@
     --accent-color: #17a2b8;         /* Color de acento para destacar */
     --background-light: #5002D5;     /* Tu color de fondo */
     --background-dark: #343a40;      /* Fondo de secciones oscuras */
-    --text-color-dark: #212529;      /* Color de texto principal */
+    --text-color-dark: #212529;      /* Color de texto principal (casi negro) */
     --text-color-light: #ffffff;     /* Color de texto para fondos oscuros */
     --card-bg: #fff;                 /* Fondo de las tarjetas */
     --shadow-light: rgba(0, 0, 0, 0.1);
 }
 
-/* --- Cuerpo de la página --- */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--background-light);
-    color: var(--text-color-light); /* Texto principal claro */
+    color: var(--text-color-light); 
     line-height: 1.6;
 }
 
@@ -96,7 +95,7 @@ h2 {
     margin-bottom: 2rem;
     position: relative;
     display: inline-block;
-    color: var(--text-color-light); /* Títulos en color claro */
+    color: var(--text-color-light);
 }
 
 h2::after {
@@ -115,16 +114,19 @@ h2::after {
     gap: 2rem;
 }
 
-.category-card, .activity-card {
+/* Regla mejorada para las tarjetas */
+.category-card, .activity-card, .result-card {
     background-color: var(--card-bg);
     border-radius: 10px;
     padding: 2rem;
     width: 300px;
     box-shadow: 0 4px 10px var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* SOLUCIÓN: El texto de la tarjeta es oscuro */
+    color: var(--text-color-dark);
 }
 
-.category-card:hover, .activity-card:hover {
+.category-card:hover, .activity-card:hover, .result-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
@@ -142,7 +144,7 @@ h2::after {
 }
 
 /* SOLUCIÓN AL PROBLEMA DE ENLACES */
-.category-card a, .activities-grid a {
+.category-card a, .activities-grid a, .card-link {
     text-decoration: none;
     color: inherit;
 }
@@ -258,6 +260,8 @@ h2::after {
     overflow: hidden;
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* SOLUCIÓN: El texto de la tarjeta es oscuro */
+    color: var(--text-color-dark);
 }
 
 .result-card:hover {
@@ -292,6 +296,13 @@ h2::after {
     color: var(--secondary-color);
 }
 
+/* Estilo para el resaltado de texto */
+.highlight {
+    background-color: #ffff00;
+    font-weight: bold;
+    padding: 2px 0;
+    border-radius: 3px;
+}
 
 
 
