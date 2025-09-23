@@ -7,7 +7,7 @@
     --background-dark: #343a40;      /* Fondo de secciones oscuras */
     --text-color-dark: #212529;      /* Color de texto principal (casi negro) */
     --text-color-light: #ffffff;     /* Color de texto para fondos oscuros */
-    --card-bg: #fff;                 /* Fondo de las tarjetas */
+    --card-bg: #e9ecef;              /* Nuevo color para el fondo de las tarjetas */
     --shadow-light: rgba(0, 0, 0, 0.1);
 }
 
@@ -116,13 +116,18 @@ h2::after {
 
 /* Regla mejorada para las tarjetas */
 .category-card, .activity-card, .result-card {
-    background-color: var(--card-bg);
+    background-color: var(--card-bg); /* Nuevo fondo de tarjeta */
     border-radius: 10px;
     padding: 2rem;
     width: 300px;
     box-shadow: 0 4px 10px var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* SOLUCIÓN: El texto de la tarjeta es oscuro */
+    /* El texto de la tarjeta es oscuro para que contraste con el fondo claro de la tarjeta */
+    color: var(--text-color-dark);
+}
+
+/* El texto de los títulos y párrafos dentro de las tarjetas */
+.category-card h3, .category-card p, .activity-card h3, .activity-card p {
     color: var(--text-color-dark);
 }
 
@@ -260,7 +265,6 @@ h2::after {
     overflow: hidden;
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* SOLUCIÓN: El texto de la tarjeta es oscuro */
     color: var(--text-color-dark);
 }
 
@@ -303,6 +307,5 @@ h2::after {
     padding: 2px 0;
     border-radius: 3px;
 }
-
 
 
