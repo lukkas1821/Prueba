@@ -4,7 +4,7 @@
     --secondary-color: #6c757d;      /* Gris para texto secundario */
     --accent-color: #17a2b8;         /* Color de acento para destacar */
     --background-light: #5002D5;     /* Tu color de fondo */
-    --background-dark: #343a40;      /* Fondo de secciones oscuras */
+    --background-dark: #343a40;      /* Nuevo fondo de cabecera y secciones oscuras */
     --text-color-dark: #212529;      /* Color de texto principal (casi negro) */
     --text-color-light: #ffffff;     /* Color de texto para fondos oscuros */
     --card-bg: #e9ecef;              /* Nuevo color para el fondo de las tarjetas */
@@ -20,9 +20,15 @@ body {
     line-height: 1.6;
 }
 
-/* --- Cabecera --- */
+/* --- Cabecera (Actualizada) --- */
 .header {
-    background-color: var(--card-bg);
+    /* Nuevo fondo para la cabecera */
+    background-color: var(--background-dark);
+    /* Se mantiene arriba al hacer scroll */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -46,7 +52,8 @@ body {
 
 .header .menu a {
     text-decoration: none;
-    color: var(--text-color-dark);
+    /* Los enlaces son blancos para que se vean bien en el fondo oscuro */
+    color: var(--text-color-light);
     font-weight: 600;
     transition: color 0.3s ease;
 }
@@ -114,7 +121,6 @@ h2::after {
     gap: 2rem;
 }
 
-/* Regla mejorada para las tarjetas */
 .category-card, .activity-card, .result-card {
     background-color: var(--card-bg);
     border-radius: 10px;
@@ -122,12 +128,6 @@ h2::after {
     width: 300px;
     box-shadow: 0 4px 10px var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* SOLUCIÓN FINAL: Estilos para el texto dentro de las tarjetas */
-.category-card h3, .category-card p, .activity-card h3, .activity-card p,
-.result-card .card-title, .result-card .card-text {
-    color: var(--text-color-dark);
 }
 
 .category-card:hover, .activity-card:hover, .result-card:hover {
@@ -147,7 +147,6 @@ h2::after {
     margin-bottom: 1rem;
 }
 
-/* SOLUCIÓN AL PROBLEMA DE ENLACES */
 .category-card a, .activities-grid a, .card-link {
     text-decoration: none;
     color: inherit;
@@ -206,14 +205,12 @@ h2::after {
     text-align: center;
 }
 
-/* Título de la sección */
 .search-container h2 {
     font-size: 2rem;
     color: var(--text-color-dark);
     margin-bottom: 1.5rem;
 }
 
-/* Estilos para el formulario */
 .search-container form {
     display: flex;
     justify-content: center;
@@ -221,7 +218,6 @@ h2::after {
     gap: 10px;
 }
 
-/* Estilo del campo de texto */
 .search-container input[type="text"] {
     padding: 12px 20px;
     border: 2px solid var(--secondary-color);
@@ -232,14 +228,12 @@ h2::after {
     transition: all 0.3s ease;
 }
 
-/* Efecto al hacer foco en el campo de texto */
 .search-container input[type="text"]:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
 }
 
-/* Estilo del botón */
 .search-container .btn {
     padding: 12px 30px;
     border: none;
@@ -251,13 +245,11 @@ h2::after {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Efecto al pasar el mouse sobre el botón */
 .search-container .btn:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
 
-/* Estilo para las tarjetas de resultados */
 .result-card {
     background-color: var(--card-bg);
     border-radius: 10px;
@@ -276,14 +268,12 @@ h2::after {
     object-fit: cover;
 }
 
-/* Estilo para el enlace de la tarjeta (para quitar el subrayado) */
 .card-link {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-/* Resto de los estilos de la tarjeta */
 .card-body {
     padding: 1.25rem;
 }
@@ -298,13 +288,13 @@ h2::after {
     color: var(--secondary-color);
 }
 
-/* Estilo para el resaltado de texto */
 .highlight {
     background-color: #ffff00;
     font-weight: bold;
     padding: 2px 0;
     border-radius: 3px;
 }
+
 
 
 
