@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background-light);
-    color: var(--text-color-light); 
+    color: var(--text-color-light);
     line-height: 1.6;
 }
 
@@ -116,18 +116,17 @@ h2::after {
 
 /* Regla mejorada para las tarjetas */
 .category-card, .activity-card, .result-card {
-    background-color: var(--card-bg); /* Nuevo fondo de tarjeta */
+    background-color: var(--card-bg);
     border-radius: 10px;
     padding: 2rem;
     width: 300px;
     box-shadow: 0 4px 10px var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* El texto de la tarjeta es oscuro para que contraste con el fondo claro de la tarjeta */
-    color: var(--text-color-dark);
 }
 
-/* El texto de los títulos y párrafos dentro de las tarjetas */
-.category-card h3, .category-card p, .activity-card h3, .activity-card p {
+/* SOLUCIÓN FINAL: Estilos para el texto dentro de las tarjetas */
+.category-card h3, .category-card p, .activity-card h3, .activity-card p,
+.result-card .card-title, .result-card .card-text {
     color: var(--text-color-dark);
 }
 
@@ -265,9 +264,7 @@ h2::after {
     overflow: hidden;
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: var(--text-color-dark);
 }
-
 .result-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -294,6 +291,7 @@ h2::after {
 .card-title {
     font-size: 1.25rem;
     font-weight: 600;
+    color: var(--text-color-dark);
 }
 
 .card-text {
@@ -307,5 +305,6 @@ h2::after {
     padding: 2px 0;
     border-radius: 3px;
 }
+
 
 
