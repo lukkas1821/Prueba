@@ -6,7 +6,7 @@ const allActivities = [
     { title: "Carrera de Relevos", description: "Velocidad y trabajo en equipo.", url: "carrera-de-relevos.html", image: "https://via.placeholder.com/400x300.png?text=Carrera+de+Relevos" },
     { title: "Yoga Divertido", description: "Equilibrio y relajación para niños.", url: "yoga-divertido.html", image: "https://via.placeholder.com/400x300.png?text=Yoga+Divertido" },
     // Agrega aquí más actividades 
-];
+]; 
 
 // Función para obtener parámetros de la URL
 function getQueryParams() {
