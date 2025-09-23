@@ -1,19 +1,19 @@
 /* Paleta de colores */
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #f7f7f7;
-    --text-color: #333;
-    --card-bg: #fff;
-    --shadow-light: rgba(0, 0, 0, 0.1);
+    --primary-color: #007bff;        /* Azul brillante para botones y acentos */
+    --secondary-color: #6c757d;      /* Gris oscuro para texto secundario */
+    --accent-color: #17a2b8;         /* Color para destacar (ej. enlaces) */
+    --background-light: #f8f9fa;     /* Fondo principal muy claro */
+    --background-dark: #343a40;      /* Fondo de secciones oscuras o pie de página */
+    --text-color-dark: #212529;      /* Color principal de texto (casi negro) */
+    --text-color-light: #ffffff;     /* Color de texto para fondos oscuros */
 }
-
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    line-height: 1.6;
+.header {
+    background-color: var(--background-light);
+}
+.footer {
+    background-color: var(--background-dark);
+    color: var(--text-color-light);
 }
 
 /* --- Cabecera --- */
@@ -141,12 +141,7 @@ h2::after {
 }
 
 /* --- Pie de Página --- */
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-}
+
 
 .container {
     max-width: 1200px;
@@ -284,3 +279,4 @@ h2::after {
 .card-text {
     color: #666;
 }
+
