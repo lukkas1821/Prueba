@@ -100,7 +100,7 @@ h2 {
     margin-bottom: 2rem;
     position: relative;
     display: inline-block;
-    color: var(--text-color-dark); /* Color de texto oscuro para el título */
+    color: var(--text-color-dark);
 }
 
 h2::after {
@@ -131,6 +131,16 @@ h2::after {
 .category-card:hover, .activity-card:hover, .result-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Solución final con !important para el texto de las tarjetas */
+.category-card h3,
+.category-card p,
+.activity-card h3,
+.activity-card p,
+.result-card .card-title,
+.result-card .card-text {
+    color: var(--text-color-dark) !important;
 }
 
 .card-icon {
@@ -168,12 +178,12 @@ h2::after {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     text-align: center;
-    color: var(--text-color-light);
+    color: var(--text-color-dark);
 }
 
 .description {
     text-align: center;
-    color: var(--text-color-dark); /* Color de texto oscuro para la descripción */
+    color: var(--text-color-dark);
     margin-bottom: 3rem;
 }
 
