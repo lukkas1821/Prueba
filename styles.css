@@ -3,7 +3,7 @@
     --primary-color: #007bff;        /* Azul principal para botones */
     --secondary-color: #6c757d;      /* Gris para texto secundario */
     --accent-color: #17a2b8;         /* Color de acento para destacar */
-    --background-light: #5002D5;     /* Tu color de fondo */
+    --background-light: #5002D5;     /* Tu color de fondo base */
     --background-dark: #343a40;      /* Nuevo fondo de cabecera y secciones oscuras */
     --text-color-dark: #212529;      /* Color de texto principal (casi negro) */
     --text-color-light: #ffffff;     /* Color de texto para fondos oscuros */
@@ -15,20 +15,18 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--background-light);
+    /* Degradado en toda la página, de un morado a otro */
+    background: linear-gradient(to bottom, #5002D5, #6215E9);
     color: var(--text-color-light);
     line-height: 1.6;
 }
 
-/* --- Cabecera (Actualizada) --- */
+/* --- Cabecera --- */
 .header {
-    /* Nuevo fondo para la cabecera */
     background-color: var(--background-dark);
-    /* Se mantiene arriba al hacer scroll */
     position: sticky;
     top: 0;
     z-index: 1000;
-    
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -52,7 +50,6 @@ body {
 
 .header .menu a {
     text-decoration: none;
-    /* Los enlaces son blancos para que se vean bien en el fondo oscuro */
     color: var(--text-color-light);
     font-weight: 600;
     transition: color 0.3s ease;
@@ -95,6 +92,7 @@ body {
 .featured-categories, .latest-activities {
     padding: 4rem 1rem;
     text-align: center;
+    background-color: var(--card-bg);
 }
 
 h2 {
@@ -102,7 +100,7 @@ h2 {
     margin-bottom: 2rem;
     position: relative;
     display: inline-block;
-    color: var(--text-color-light);
+    color: var(--text-color-dark);
 }
 
 h2::after {
@@ -154,7 +152,8 @@ h2::after {
 
 /* --- Pie de Página --- */
 .footer {
-    background-color: var(--background-dark);
+    /* El fondo es transparente para que se vea el degradado del body */
+    background-color: transparent;
     color: var(--text-color-light);
     text-align: center;
     padding: 1.5rem;
@@ -175,7 +174,7 @@ h2::after {
 
 .description {
     text-align: center;
-    color: var(--secondary-color);
+    color: var(--text-color-dark);
     margin-bottom: 3rem;
 }
 
@@ -294,6 +293,7 @@ h2::after {
     padding: 2px 0;
     border-radius: 3px;
 }
+
 
 
 
