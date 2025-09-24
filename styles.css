@@ -22,10 +22,13 @@ body {
 
 /* --- Cabecera (Actualizada) --- */
 .header {
+    /* Nuevo fondo para la cabecera */
     background-color: var(--background-dark);
+    /* Se mantiene arriba al hacer scroll */
     position: sticky;
     top: 0;
     z-index: 1000;
+    
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -49,6 +52,7 @@ body {
 
 .header .menu a {
     text-decoration: none;
+    /* Los enlaces son blancos para que se vean bien en el fondo oscuro */
     color: var(--text-color-light);
     font-weight: 600;
     transition: color 0.3s ease;
@@ -87,12 +91,10 @@ body {
     transform: scale(1.05);
 }
 
-/* --- Secciones de Contenido (Actualizadas) --- */
+/* --- Secciones de Contenido --- */
 .featured-categories, .latest-activities {
     padding: 4rem 1rem;
     text-align: center;
-    /* Nuevo fondo para esta sección */
-    background-color: var(--card-bg);
 }
 
 h2 {
@@ -100,7 +102,7 @@ h2 {
     margin-bottom: 2rem;
     position: relative;
     display: inline-block;
-    color: var(--text-color-dark); /* Color de texto oscuro para el título */
+    color: var(--text-color-light);
 }
 
 h2::after {
@@ -173,7 +175,7 @@ h2::after {
 
 .description {
     text-align: center;
-    color: var(--text-color-dark); /* Color de texto oscuro para la descripción */
+    color: var(--secondary-color);
     margin-bottom: 3rem;
 }
 
@@ -292,6 +294,7 @@ h2::after {
     padding: 2px 0;
     border-radius: 3px;
 }
+
 
 
 
