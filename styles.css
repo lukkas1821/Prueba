@@ -1,13 +1,13 @@
 /* Paleta de colores */
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --accent-color: #17a2b8;
-    --background-light: #5002D5;
-    --background-dark: #343a40;
-    --text-color-dark: #212529;
-    --text-color-light: #ffffff;
-    --card-bg: #e9ecef;
+    --primary-color: #007bff;        /* Azul principal para botones */
+    --secondary-color: #6c757d;      /* Gris para texto secundario */
+    --accent-color: #17a2b8;         /* Color de acento para destacar */
+    --background-light: #5002D5;     /* Tu color de fondo base */
+    --background-dark: #343a40;      /* Nuevo fondo de cabecera y secciones oscuras */
+    --text-color-dark: #212529;      /* Color de texto principal (casi negro) */
+    --text-color-light: #ffffff;     /* Color de texto para fondos oscuros */
+    --card-bg: #e9ecef;              /* Nuevo color para el fondo de las tarjetas */
     --shadow-light: rgba(0, 0, 0, 0.1);
 }
 
@@ -15,6 +15,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    /* Degradado en toda la página, de un morado a otro */
     background: linear-gradient(to bottom, #5002D5, #6215E9);
     color: var(--text-color-light);
     line-height: 1.6;
@@ -91,7 +92,6 @@ body {
 .featured-categories, .latest-activities {
     padding: 4rem 1rem;
     text-align: center;
-    /* Sin color de fondo para que se vea el degradado */
     background-color: transparent;
 }
 
@@ -100,7 +100,7 @@ h2 {
     margin-bottom: 2rem;
     position: relative;
     display: inline-block;
-    color: var(--text-color-light); /* Color de texto blanco para el título */
+    color: var(--text-color-dark); /* Color de texto oscuro para el título */
 }
 
 h2::after {
@@ -173,7 +173,7 @@ h2::after {
 
 .description {
     text-align: center;
-    color: var(--text-color-light); /* Color de texto blanco para la descripción */
+    color: var(--text-color-dark); /* Color de texto oscuro para la descripción */
     margin-bottom: 3rem;
 }
 
